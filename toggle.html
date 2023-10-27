@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="tog">
+        <div class="animate" id="circle"></div>
+    </div>
+    <h1>CLICK ON THE TOGGLE BUTTON</h1>
+</body>
+<script>
+var toggled=false;
+var htag=document.getElementsByTagName("h1")[0];
+var btag=document.getElementsByTagName("body")[0];
+var circle=document.getElementById("circle")
+document.getElementById("tog").onclick=function(){
+    if(!toggled){
+        htag.classList.add("color-white");  
+        btag.classList.add("bck-color-black");
+        circle.style.marginleft="100px";
+        toggled=true;
+    }else{
+        htag.classList.remove("color-white");
+        btag.classList.remove("bck-color-black");
+        circle.style.marginleft="1px";
+        toggled=false
+    }
+}
+</script>
+</html>
